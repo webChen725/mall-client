@@ -23,10 +23,17 @@
             <a href="#" @click.prevent="showLoginModal" v-if="!auth">
               <i class="el-icon-s-custom"></i>
             </a>
-            <span class="avatar" v-else-if="auth && userInfo">
-                <img v-if="userInfo.myPhoto" :src="userInfo.myPhoto" />
-                <i v-else>{{userInfo.userName[0]}}</i>
-            </span>
+            <el-dropdown v-else-if="auth && userInfo">
+              <span class="avatar">
+                  <img v-if="userInfo.myPhoto" :src="userInfo.myPhoto" />
+                  <i v-else>{{userInfo.userName[0]}}</i>
+              </span>
+              <el-dropdown-menu slot="dropdown">
+                <el-dropdown-item>
+                    <a href="#" @click="toAddress" class="addr-btn">收货地址管理</a>
+                </el-dropdown-item>
+              </el-dropdown-menu>
+            </el-dropdown>
           </li>
           <li class="cart" v-if="auth">
             <el-dropdown>
@@ -112,6 +119,11 @@ export default {
       this.$router.push({
         path: "/carts"
       })
+    },
+    toAddress(){
+      this.$router.push({
+        path: "/address"
+      })
     }
   },
   computed: {
@@ -165,6 +177,7 @@ export default {
     }
     .user-info a {
       color: #666;
+      text-decoration: none;
     }
     .cart {
         position: relative;
@@ -245,4 +258,9 @@ export default {
         line-height: 20px;
     }
 }
+.addr-btn{
+    text-decoration: none;
+    color: #686868;
+    
+  }
 </style>
