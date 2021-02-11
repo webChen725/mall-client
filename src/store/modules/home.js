@@ -20,7 +20,7 @@ const mutations = {
   }
 };
 const actions = {
-  async getGoodsList({ commit }, query) {
+  async getGoodsList({ commit }, query = "") {
     const res = await getGoodsList(query);
     commit("getGoodsList", res);
   },

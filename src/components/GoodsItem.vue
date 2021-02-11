@@ -1,5 +1,5 @@
 <template>
-  <div class="goods">
+  <div class="goods" @click="toDetail">
     <div class="cover">
       <img :src="goods.productCover" alt="" />
     </div>
@@ -16,6 +16,14 @@ export default {
   name: "goods-item",
   props: {
     goods: Object
+  },
+  methods: {
+    toDetail(){
+      this.$router.push({
+        path: "/detail",
+        query: { id: this.goods.id}
+      })
+    }
   }
 };
 </script>

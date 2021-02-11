@@ -15,7 +15,8 @@ import {
   FormItem,
   Input,
   Message,
-  Tag
+  Tag,
+  InputNumber
 } from "element-ui";
 import "element-ui/lib/theme-chalk/index.css";
 import "@/assets/styles/reset.scss";
@@ -34,6 +35,7 @@ Vue.use(Form);
 Vue.use(FormItem);
 Vue.use(Input);
 Vue.use(Tag);
+Vue.use(InputNumber)
 
 Vue.prototype.$message = Message;
 

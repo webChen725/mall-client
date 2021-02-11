@@ -1,0 +1,57 @@
+.detail{
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    main{
+        width: 80%;
+        height: auto;
+        margin: 0 auto;
+        background: #fff;
+        padding: 20px;
+        box-shadow: 0 0 10px #dedede;
+        border-radius: 4px;
+        display: flex;
+    }
+    .cover{
+        width: 40%;
+        overflow: hidden;
+        height: auto;
+        img{
+            width: 100%;
+            height: auto;
+        }
+    }
+    .desc{
+        flex: 1;
+        margin-left: 20px;
+        h3{
+            line-height: 3rem;
+            font-size: 20px;
+            color: #232323;
+        }
+        .intro{
+            font-size: 14px;
+            color: #686868;
+            line-height: 2rem;
+        }
+        .price{
+            font-size: 15px;
+            color: rgb(187, 26, 26);
+            font-weight: 600;
+            margin-top: .5rem;
+        }
+        .count{
+            font-size: 15px;
+            font-weight: 600;
+            color: #888;
+            line-height: 2rem;
+            margin-top: .5rem;
+        }
+        .toCart{
+            margin-top: 1rem;
+            .btn{
+                margin-left: 1rem;
+            }
+        }
+    }
+}
