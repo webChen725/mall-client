@@ -30,7 +30,7 @@ const actions = {
   },
   async getUserCarts({ commit }){
     const res = await getUserCarts();
-    commit("getUserCarts", res.carts);
+    commit("getUserCarts", res?.carts || []);
   }
 };
 

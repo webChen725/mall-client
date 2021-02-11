@@ -30,7 +30,7 @@
           </li>
           <li class="cart" v-if="auth">
             <el-dropdown>
-              <span class="cart-icon">
+              <span class="cart-icon" @click="toCarts">
                 <i class="el-icon-shopping-cart-full"></i>
                 <b class="count">{{carts.length}}</b>
               </span>
@@ -107,6 +107,11 @@ export default {
     },
     closeLoginModal(){
         this.showModal = false;
+    },
+    toCarts(){
+      this.$router.push({
+        path: "/carts"
+      })
     }
   },
   computed: {
