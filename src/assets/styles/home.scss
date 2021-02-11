@@ -1,0 +1,48 @@
+.home{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .main{
+        width: 90%;
+        margin-top: 1rem;
+        .goods-head{
+            width: 100%;
+            background: #fff;
+            height: 50px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #eee;
+        }
+    }
+    .goods-head{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        ul{
+            display: flex;
+            margin-right: 1rem;
+            li{
+                margin-left: 1rem;
+                a{
+                    color: #666;
+                    text-decoration: none;
+                }
+                .active{
+                    color: rgb(204, 40, 40);
+                }
+            }
+        }
+    }
+    .goods-list{
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 1rem;
+        width: 100%;
+        background: #fff;
+        .goods-item{
+            width: 19%;
+            margin-right: 1%;
+        }
+    }
+
+    padding-bottom: 20px;
+}
